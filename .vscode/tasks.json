@@ -7,7 +7,7 @@
             "command": "gcc",
             "args": [
                 "-o",
-                "${workspaceFolder}/output",
+                "C:\\Users\\Administrator\\Desktop\\C_Project\\output_c",
                 "${workspaceFolder}/main.c",
                 "${workspaceFolder}/dateMain.c",
             ],
