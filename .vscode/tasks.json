@@ -9,8 +9,8 @@
                 "-o",
                 "C:\\Users\\Administrator\\Desktop\\C_Project\\output_c",
                 "${workspaceFolder}/main.c",
-                "${workspaceFolder}/dateMain.c",
-                "${workspaceFolder}/dateAdd.c",
+                "${workspaceFolder}/moduel/date/dateMain.c",
+                "${workspaceFolder}/moduel/date/dateAdd.c",
             ],
             "group": {
                 "kind": "build",

@@ -25,10 +25,10 @@ int dateAdd(){
     input_Check(0, day);
     printf("等待输入 [推迟周期(*7d)]...");
     scanf("%d", &week_add);
-    input_Check(0, week_add);
+    input_Check(1, week_add);
     printf("等待输入 [推迟日期(*d)]...");
     scanf("%d", &day_add);
-    input_Check(0, day_add);
+    input_Check(1, day_add);
 
     // 开始计算日
     //先把日期堆起来，顺便把周数换算成日期也堆上去
