@@ -1,0 +1,7 @@
+{
+    "files.associations": {
+        "datamain.h": "c",
+        "datemain.h": "c",
+        "var.h": "c"
+    }
+}

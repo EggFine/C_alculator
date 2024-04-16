@@ -3,108 +3,47 @@
 #include <stdlib.h>
 #include <conio.h>
 
+#include "dateMain.h"
+
+int select_go();
 int select;
+
 int main()
 {
-    printf("============== æ¬¢è¿ä½¿ç”¨è®¡ç®—å™¨ [Welcome to the calculator] ==============\n");
-    printf("! è¾“å…¥æ•°å­—è¿›å…¥ä½ æƒ³è¦çš„åŠŸèƒ½ [Enter the number to enter the function you want] !\n");
-    printf("[0x0] æ—¥æœŸè®¡ç®—\n");
-    printf("[0x1] ç­‰å¾…å¼€å‘...\n");
+    printf("============== »¶Ó­Ê¹ÓÃ¼ÆËãÆ÷ [Welcome to the calculator] ==============\n");
+    printf("! ÊäÈëÊı×Ö½øÈëÄãÏëÒªµÄ¹¦ÄÜ [Enter the number to enter the function you want] !\n");
+    printf("[0x0] ÈÕÆÚ¼ÆËã\n");
+    printf("[0x1] µÈ´ı¿ª·¢...\n");
     printf("\n\n\n\n");
-    printf("ç­‰å¾…è¾“å…¥...");
+    printf("µÈ´ıÊäÈë...");
     int select;
     scanf("%d", &select);
     select_go();
 }
 
-// æ ¹æ®é€‰é¡¹è·³è½¬è‡³å¯¹åº”åŠŸèƒ½æ–¹æ³•
+// ¸ù¾İÑ¡ÏîÌø×ªÖÁ¶ÔÓ¦¹¦ÄÜ·½·¨
 int select_go()
 {
-    printf("å·²é€‰æ‹© [0x%d]\n", select);
-    printf("æ­£åœ¨åˆ‡æ¢å…¥å£...");
+    printf("ÒÑÑ¡Ôñ [0x%d]\n", select);
+    printf("ÕıÔÚÇĞ»»Èë¿Ú...");
     if (select == 0)
     {
-        printf("è¿›å…¥æ—¥æœŸè®¡ç®—...");
-        part_Data_Main();
+        printf("½øÈëÈÕÆÚ¼ÆËã...");
+        part_Date_Main();
     }
     else
     {
-        printf("æ²¡æœ‰æ‰¾åˆ°å¯¹åº”åŠŸèƒ½");
+        printf("Ã»ÓĞÕÒµ½¶ÔÓ¦¹¦ÄÜ");
     }
 }
 
-// æ—¥æœŸè®¡ç®—æ–¹æ³•
-int part_Data_Main()
-{
-    // é¢„å®šä¹‰ [å¹´] [æœˆ] [æ—¥] å˜é‡
-    int year, month, day, year_add, month_add, day_add;
-    printf("å·²è¿›å…¥æ—¥æœŸè®¡ç®—ä¸»æ–¹æ³•\n");
-    printf("\n\n\n\n");
-    printf("============== æ—¥æœŸè®¡ç®— ==============\n");
-    printf("ç­‰å¾…è¾“å…¥ [å¹´ä»½]...");
-    scanf("%d", &year);
-    printf("ç­‰å¾…è¾“å…¥ [æœˆä»½]...");
-    scanf("%d", &month);
-    input_Check(0,month);
-    printf("ç­‰å¾…è¾“å…¥ [æ—¥æœŸ]...");
-    scanf("%d", &day);
-    printf("ç­‰å¾…è¾“å…¥ [æ¨è¿Ÿæ—¥æœŸ]...");
-    scanf("%d", &day_add);
-    // å¼€å§‹è®¡ç®—å¹´ä»½
-    year += year_add;
-    // å¼€å§‹è®¡ç®—æœˆä»½
-    month += month_add;
-    while (month > 12)
-    {
-        month -= 12;
-        year++;
-    }
-    if (month == 0)
-    {
-        month++;
-    }
-    // å¼€å§‹è®¡ç®—æ—¥
-    day += day_add;
-    int day_cut;
-    while (day > day_cut)
-    {
-        if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
-        {
-            day_cut = 31;
-        }
-        else if (month == 4 || month == 6 || month == 9 || month == 11)
-        {
-            day_cut = 30;
-        }
-        else if (month == 2)
-        {
-            if (year % 4 == 0 && year % 100 != 0)
-            {
-                day_cut = 29;
-            }
-            else
-            {
-                day_cut = 28;
-            }
-        }
-        day -= day_cut;
-        month++;
-    }
-    if (day == 0)
-    {
-        day++;
-    }
 
-    // è®¡ç®—å®Œæˆ è¾“å‡º
-    printf("%d.%d.%d", year, month, day);
-    getchar();
-}
 
 int input_Check(int checkType, int checkStr)
 {
-    // å®šä¹‰åˆ¤æ–­æ˜¯å¦éæ³•è¾“å…¥çš„å˜é‡ï¼Œå¹¶åˆå§‹ä¸ºå‡
+    // ¶¨ÒåÅĞ¶ÏÊÇ·ñ·Ç·¨ÊäÈëµÄ±äÁ¿£¬²¢³õÊ¼Îª¼Ù
     bool wrong = false;
-    // checkTypeä¸º0æ—¶æ˜¯å¯¹æ—¥æœŸæ˜¯åˆ¤æ–­æ•°å€¼æ˜¯å¦å¤§äº0
+    // checkTypeÎª0Ê±ÊÇ¶ÔÈÕÆÚÊÇÅĞ¶ÏÊıÖµÊÇ·ñ´óÓÚ0
     switch (checkType)
     {
     case 0:
@@ -119,20 +58,20 @@ int input_Check(int checkType, int checkStr)
     }
     if(wrong){
         system("cls");
-        printf("è¾“å…¥ä¸åˆæ³•...");
+        printf("ÊäÈë²»ºÏ·¨...");
         switch(checkType)
         {
         case 0:
-            printf("è¾“å…¥å†…å®¹ä¸èƒ½å°äºæˆ–ç­‰äº0\n");
+            printf("ÊäÈëÄÚÈİ²»ÄÜĞ¡ÓÚ»òµÈÓÚ0\n");
         default:
             break;
         }
-        printf("æŒ‰ Enter é”®ç»§ç»­ã€‚");
+        printf("°´ Enter ¼ü¼ÌĞø¡£");
         char ch;
         do {
-            ch = getch(); // è·å–é”®ç›˜è¾“å…¥çš„å­—ç¬¦
-        } while (ch != 13); // 13æ˜¯å›è½¦é”®çš„ASCIIç 
+            ch = getch(); // »ñÈ¡¼üÅÌÊäÈëµÄ×Ö·û
+        } while (ch != 13); // 13ÊÇ»Ø³µ¼üµÄASCIIÂë
         system("cls");
-        select_go(select);
+        select_go();
     }
 }
