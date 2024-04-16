@@ -61,7 +61,9 @@ int dateAdd(){
 
 }
 
+// 判断月份，并判断平闰年
 int check_month(){
+    // 我是癫子，但月份有限，还好
     if (month == 1 || month == 3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)
     {
         day_cut = 31;
@@ -72,6 +74,7 @@ int check_month(){
     }
     else if (month == 2)
     {
+        // 取余判断是否闰年，闰年二月日数不一样
         if (year % 4 == 0 && year % 100 != 0)
         {
             day_cut = 29;
