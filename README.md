@@ -8,19 +8,19 @@
 
 
 
-| 软件名称 | 系算[C_alculator]  |
-| -------- | :----------------- |
-| 开发语言 | C                  |
-| 编译器   | MinGW-W64          |
-| IDE      | Visual Studio Code |
-| 开源协议 | **Apache-2.0**     |
-|          |                    |
+| 软件名称 | 系算[C_alculator]            |
+| -------- | :--------------------------- |
+| 运行架构 | Windows x86 [Windows x86_64] |
+| 开发语言 | C                            |
+| 编译器   | MinGW-W64                    |
+| IDE      | Visual Studio Code           |
+| 开源协议 | **Apache-2.0**               |
 
 
 
 **当前功能**
 
-**无，还在码**
+无，还在码
 
 
 
