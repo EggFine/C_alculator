@@ -1,4 +1,4 @@
-## 基于C语言的多功能计算器
+## 系算[C_alculator]
 
 > **写在前面**
 >
@@ -6,12 +6,15 @@
 >
 > 该项目遵循 **Apache-2.0开源协议**
 
-软件名称：**C_alculator**
-开发语言: C
-编译器：MinGW-W64
-IDE：Visual Studio Code
 
-开源协议：**Apache-2.0**
+
+| 软件名称 | 系算[C_alculator]  |
+| -------- | :----------------- |
+| 开发语言 | C                  |
+| 编译器   | MinGW-W64          |
+| IDE      | Visual Studio Code |
+| 开源协议 | **Apache-2.0**     |
+|          |                    |
 
 
 
