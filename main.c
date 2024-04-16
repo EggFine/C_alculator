@@ -51,16 +51,21 @@ int input_Check(int checkType, int checkStr)
 {
     // 定义判断是否非法输入的变量，并初始为假
     bool wrong = false;
-    // checkType为0时是对日期是判断数值是否大于0
     switch (checkType)
     {
+    // checkType为0时是对日期是判断数值是否大于0
     case 0:
         if (checkStr <= 0)
         {
             wrong = true;
         }
         break;
-
+    // checkType为1时对日期判断数值是否为非负数
+    case 1:
+        if (checkStr < 0)
+        {
+            wrong = true;
+        }
     default:
         break;
     }
@@ -73,6 +78,8 @@ int input_Check(int checkType, int checkStr)
         {
         case 0:
             printf("输入内容不能小于或等于0");
+        case 1:
+            printf("输入内容只能为非负数");
         default:
             break;
         }

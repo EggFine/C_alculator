@@ -16,6 +16,7 @@ int year, month, day, week_add, day_add,day_cut;
 int dateAdd(){
     printf("等待输入 [开始年份(*y)]...");
     scanf("%d", &year);
+    input_Check(1, year);
     printf("等待输入 [开始月份(*m)]...");
     scanf("%d", &month);
     input_Check(0, month);
