@@ -18,7 +18,7 @@
 
 
 
-发现Bug？[点击此处提交 issues](/issues) 帮助我解决问题
+发现Bug？[点击此处提交 issues](https://github.com/EggFine/C_alculator/issues) 帮助我解决问题
 
 
 
