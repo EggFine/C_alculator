@@ -7,7 +7,7 @@
             "command": "gcc",
             "args": [
                 "-o",
-                "C:\\Users\\Administrator\\Desktop\\C_Project\\output_c",
+                "C:\\Users\\Administrator\\Desktop\\C_Project\\C_alculator",
                 "${workspaceFolder}/main.c",
                 "${workspaceFolder}/moduel/date/dateMain.c",
                 "${workspaceFolder}/moduel/date/dateAdd.c",

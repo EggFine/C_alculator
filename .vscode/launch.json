@@ -5,7 +5,7 @@
             "name": "C_alculator",
             "type": "cppdbg",
             "request": "launch",
-            "program": "C:\\Users\\Administrator\\Desktop\\C_Project\\output_c", // 设置要调试的可执行文件的路径和名称
+            "program": "C:\\Users\\Administrator\\Desktop\\C_Project\\C_alculator", // 设置要调试的可执行文件的路径和名称
             "args": [],
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
